@@ -9,17 +9,44 @@
   <body>
     <div id="app"></div>
     <script type="text/babel">
-      function Badge() {
+
+      // //方法一
+      // function Badge(props) {
+      //   console.log(props);
+      //   //props属性可以再{}直接写
+      //   return (
+      //     <div>
+      //       <img src={props.img} />
+      //       <h1>Name:{props.name}</h1>
+      //       <h3>username:{props.username}</h3>
+      //     </div>
+      //   );
+      // }
+
+      //方法二
+      function Badge(props) {
+        const {img,name, username}=props;
+        //props属性可以再{}直接写
         return (
           <div>
-            <img src={''} />
-            <h1>Name:</h1>
-            <h3>username:</h3>
+            <img src={img} />
+            <h1>Name:{name}</h1>
+            <h3>username:{username}</h3>
+            <h1>Test</h1>
           </div>
         );
       }
 
+      // React.createElement("div",{
+      //   name:"Fluffy the Cat", 
+      //   username:"fluffycat",
+      //   img:"https:/placekitten.com/300/300"
+      // })
+      //下面的代码与上面代码意义相同可解释为：name，username，img都是props
+      
+      
       ReactDOM.render(
+        //相当于props
         <Badge
           name="Fluffy the Cat"
           username="fluffycat"
