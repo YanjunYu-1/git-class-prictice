@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/babel">
+      function Badge({img,name, username}) {
+        return (
+          <div>
+            <img src={img} />
+            <h1>Name:{name}</h1>
+            <h3>username:{username}</h3>
+          </div>
+        );
+      }
+
+      //测试GitHub
+
+      // const giveValue=React.createElement(
+      //   "div",
+      //   null,
+      //   <Badge img="https:/placekitten.com/300/300" name="Fluffy the Cat" username="fluffycat" />)
+
+      ReactDOM.render(
+        <Badge
+          name="Fluffy the Cat"
+          username="fluffycat"
+          img="https:/placekitten.com/300/300"
+        />,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>

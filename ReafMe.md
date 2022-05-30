@@ -10,4 +10,4 @@ git log//查看提交的说明
 3.在GitHub上建立新的仓库，注意名字是git-name
 git remote add origin https://github.com/YanjunYu-1/git-test.git
 git remote
-git push -u origin master
+git push -u origin master   
