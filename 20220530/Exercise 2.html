@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/babel">
+      function Avatar(props) {
+          //第二个参数是个链接
+        // return <img src={props.img}/>;
+        return React.createElement("img",{src:props.img});
+      }
+
+      function Label(props) {
+          const {name}=props;
+          //注意Name:${name}两面不是单引号
+        // return <h1>Name:{name} </h1>;
+        return React.createElement('h1',{},`Name:${name}`);
+      }
+
+      function ScreenName({username}) {
+        // return <h3>Username: {username}</h3>;
+        return React.createElement('h3',null,`Username:${username}`);
+      }
+
+      function Badge(props) {
+          console.log(props.user);
+        return (
+          <div>
+            <Avatar img={props.user.img}/>
+            <Label name={props.user.name}/>
+            <ScreenName username={props.user.username}/>
+          </div>
+
+          
+            // React.createElement(
+            //     "div",
+            //     null,
+            //     React.createElement("Avatar",{img:props.user.img}),
+            //     React.createElement("Label",{name:props.user.name}),
+            //     React.createElement("ScreenName",{name:props.user.username}),
+            // )
+        );
+      }
+
+      ReactDOM.render(
+        // <Badge
+        //   user={{
+        //     name: "Fluffy the Cat",
+        //     img: "https:/placekitten.com/300/300",
+        //     username: "fluffycat",
+        //   }}
+        // />,
+        React.createElement("Badge",{
+            user:{
+                name: "Fluffy the Cat",
+                img: "https:/placekitten.com/300/300",
+                username: "fluffycat",
+            },
+        }),
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>

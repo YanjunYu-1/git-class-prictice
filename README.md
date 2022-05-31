@@ -11,5 +11,3 @@ git log//查看提交的说明
 git remote add origin https://github.com/YanjunYu-1/git-test.git
 git remote
 git push -u origin master   
-
-你好
