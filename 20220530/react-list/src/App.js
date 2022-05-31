@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import RestaurantCard from './components/RestaurantCard';
+//import {RestaurantCard} from './components/RestaurantCard';//第二种方法
+
+
 
 function App() {
   const restaurants=[
@@ -76,8 +80,6 @@ function App() {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, repellat.",
     },
   ];
-
-
   return (
     <ul className="container">
       {restaurants.map((restaurant,index) =>{
