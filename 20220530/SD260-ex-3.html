@@ -9,30 +9,42 @@
   <body>
     <div id="app"></div>
     <script type="text/babel">
-      function Avatar() {
-        return <img src={""} />;
+      function Avatar(props) {
+        // console.log("img");
+        // console.log(props);
+        return <img src={props.img}/>;
       }
 
-      function Label() {
-        return <h1>Name: </h1>;
+      function Label(props) {
+        const {name}=props;
+        return <h1>Name:{name} </h1>;
       }
 
-      function ScreenName() {
-        return <h3>Username: </h3>;
+      function ScreenName({username}) {
+        // console.log(username);
+        //上面{props}{}是jsx语言
+        return <h3>Username: {username}</h3>;
       }
 
-      function Badge() {
+      function Badge(props) {
+        // console.log(props);
+        // console.log(props.user);
+        console.log(props.user.username);
+        // const {img,name, username}=props.user;
+        // console.log(img);//此处img虽然是个地址，但是传递过去后再次变成object，所以没有实际意义
+        //此处讲的是传递，将属性传递到各个component组件中
         return (
           <div>
-            <Avatar />
-            <Label />
-            <ScreenName />
+            <Avatar img={props.user.img}/>
+            <Label name={props.user.name}/>
+            <ScreenName username={props.user.username}/>
           </div>
         );
       }
 
       ReactDOM.render(
         <Badge
+        //练习2与3有点像，3把方法放到了里面
           user={{
             name: "Fluffy the Cat",
             img: "https:/placekitten.com/300/300",

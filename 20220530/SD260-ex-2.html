@@ -29,6 +29,9 @@
 
       //方法二:与第一练习稍有区别
       function Badge(props) {
+        console.log(props);
+        console.log(props.user);
+        console.log(props.user.img);
         const {img,name,username} =props.user;
         return (
           <div>
