@@ -29,20 +29,20 @@
       function Badge(props) {
           console.log(props.user);
         return (
-          <div>
-            <Avatar img={props.user.img}/>
-            <Label name={props.user.name}/>
-            <ScreenName username={props.user.username}/>
-          </div>
+          // <div>
+          //   <Avatar img={props.user.img}/>
+          //   <Label name={props.user.name}/>
+          //   <ScreenName username={props.user.username}/>
+          // </div>
 
           
-            // React.createElement(
-            //     "div",
-            //     null,
-            //     React.createElement("Avatar",{img:props.user.img}),
-            //     React.createElement("Label",{name:props.user.name}),
-            //     React.createElement("ScreenName",{name:props.user.username}),
-            // )
+            React.createElement(
+                "div",
+                null,
+                React.createElement(Avatar,{img:props.user.img}),
+                React.createElement(Label,{name:props.user.name}),
+                React.createElement(ScreenName,{username:props.user.username}),
+            )
         );
       }
 
@@ -54,7 +54,9 @@
         //     username: "fluffycat",
         //   }}
         // />,
-        React.createElement("Badge",{
+
+
+        React.createElement(Badge,{
             user:{
                 name: "Fluffy the Cat",
                 img: "https:/placekitten.com/300/300",
