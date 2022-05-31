@@ -1,3 +1,4 @@
+//GitHub
 1.git --version//查看版本
 git config --global --list//查看name和email
 git init//创建git文件用来上传文件
@@ -11,3 +12,11 @@ git log//查看提交的说明
 git remote add origin https://github.com/YanjunYu-1/git-test.git
 git remote
 git push -u origin master   
+
+//REACT
+node -v 查看node版本号
+npm i -g create-react-app@1.5.2
+npx create-react-app react-app（名字不能有大写字母）
+
+进入文件夹才能运行npm start
+npm i bootstrap@4.1.1 
