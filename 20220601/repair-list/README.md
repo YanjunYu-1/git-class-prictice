@@ -34,6 +34,10 @@ Alt + shift + F
 
 2-2 设定初始状态useState(专有词，不可写错)，设定初始值，并以参数的形式传递到子集
 
+2-3考虑点击删除键时，删除相应的项目
+
+（1）最小子集repair添加删除事件onClick，并向父类repaiList请求参数，没有再向父类app请求
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

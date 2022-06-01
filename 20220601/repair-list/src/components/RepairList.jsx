@@ -2,7 +2,7 @@ import Repair from "./Repair";
 
 const RepairList = (props) => {//修复列表
     //第二种展示方法
-    const {repairs}=props;
+    const {repairs,deleteRepair}=props;
 
     return (
         <ul className="repair-list">
@@ -12,6 +12,7 @@ const RepairList = (props) => {//修复列表
                 id={repair.id}
                 description={repair.description}
                 completed={repair.completed}
+                deleteRepair={deleteRepair}
                 />
             ))}
             {/* 第一种展示方法

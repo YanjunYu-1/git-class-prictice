@@ -13,6 +13,13 @@ function App() {
   ];
 
   const [repairs, setRepairs] = useState(initialState);
+
+  //此方法用于删除项目
+  const handleDeleteRepair=(id)=>{
+    // console.log("delete pair",id);
+    // console.log(typeof id)
+    setRepairs(prevState=>prevState.filter(repair=>repair.id !== +id))
+  }
   return (
     <section className="fixmeapp">
       <Header>
@@ -22,7 +29,7 @@ function App() {
       </Header>
 
       <section className="main">
-        <RepairList repairs={repairs} />
+        <RepairList repairs={repairs} deleteRepair={handleDeleteRepair} />
       </section>
 
       <Footer />
