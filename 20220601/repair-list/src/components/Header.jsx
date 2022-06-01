@@ -1,9 +1,9 @@
-import Form from './Form';
-const Header = () => {
+
+const Header = (props) => {
     return (
         <header className="header">
             <h1>rep🔥irs</h1>
-            <Form />
+            {props.children}
         </header>
     );
 }

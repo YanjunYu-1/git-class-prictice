@@ -22,6 +22,8 @@ Alt + shift + F
 
 8.再次细分Header，将Form提取出来，并正确显示
 
+9.在此使用新的方法在app.js中使用Form.jsx
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
