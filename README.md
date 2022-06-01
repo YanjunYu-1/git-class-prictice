@@ -1,3 +1,26 @@
+//Exercise 4 - Adding Components总结
+
+1.将项目中的每一个部分分开写，方便整理
+
+2.每一部分将需要的数据传入
+
+//快捷键sfc
+
+```java
+const  = () => {
+    return (  );
+}
+ 
+export default ;
+```
+
+//代码
+```java
+cuisines: ["japanese", "sushi","1111", "2222"],//源代码
+<p>{cuisines.join(",")}</p>//join方法
+japanese,sushi,1111,2222//显示结果
+```
+
 //GitHub
 
 1.git --version//查看版本
