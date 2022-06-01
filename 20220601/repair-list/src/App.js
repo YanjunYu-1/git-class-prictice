@@ -1,14 +1,11 @@
 import './App.css';
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <section className="fixmeapp">
-        <header className="header">
-          <h1>rep🔥irs</h1>
-          <form>
-            <input className="new-repair" placeholder="What needs to be repaired?" autofocus="" />
-          </form>
-        </header>
+        <Header />
         <section className="main">       
           <ul className="repair-list">
           <li data-id="2" className="">
@@ -33,9 +30,7 @@ function App() {
             </div>
           </li></ul>
         </section>
-        <footer className="footer">     
-          <button className="clear-completed">Clear completed</button>
-        </footer>
+        <Footer />
       </section>   
   );
 }

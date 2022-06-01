@@ -14,6 +14,8 @@ Alt + shift + F
 
 4.将css文件内容粘贴到App.css中
 
+5.建立组件components，建最简单的Header和Footer放入
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
