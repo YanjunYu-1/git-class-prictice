@@ -20,6 +20,8 @@ Alt + shift + F
 
 7.在components中放入RepairList修复列表
 
+8.再次细分Header，将Form提取出来，并正确显示
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
