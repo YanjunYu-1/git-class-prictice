@@ -1,8 +1,4 @@
-//20200601项目详解
 
-1.建立文件夹 npx create-react-app repair-list
-
-2.删除无用的文件和链接
 
 //Exercise 4 - Adding Components总结
 
