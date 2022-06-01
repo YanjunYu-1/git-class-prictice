@@ -4,6 +4,14 @@
 
 2.删除无用的文件和链接
 
+3.将有用的代码copy到App.js中
+
+（1）直接copy会有格式问题可以用快捷键修复
+```java
+Alt + shift + F
+```
+(2)在app.js中input标签需要闭合“/”
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
