@@ -1,3 +1,7 @@
+//20200601项目详解
+
+1，建立文件夹 npx create-react-app repair-list
+
 //Exercise 4 - Adding Components总结
 
 1.将项目中的每一个部分分开写，方便整理
