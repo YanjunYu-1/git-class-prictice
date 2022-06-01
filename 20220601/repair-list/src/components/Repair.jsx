@@ -1,9 +1,10 @@
-const Repair = () => {
+const Repair = (props) => {
+    const {id,description,completed}=props;
     return (
-        <li data-id="2" className="">
+        <li data-id={id} className={completed?"completed":""}>
             <div className="view">
                 <input className="toggle" type="checkbox" />
-                <label>Car makes a funny sound</label>
+                <label>{description}</label>
                 <button className="destroy"></button>
             </div>
         </li>

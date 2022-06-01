@@ -1,5 +1,7 @@
 //20200601项目详解
 
+一、布局
+
 1.建立文件夹 npx create-react-app repair-list
 
 2.删除无用的文件和链接
@@ -25,6 +27,10 @@ Alt + shift + F
 9.在此使用新的方法在app.js中使用Form.jsx
 
 10.完成全部的代码布局
+
+二、详细代码
+
+2-1设定最小子集repair，针对要展示的信息，设定所需要的props，然后再repairList中设定props，进行信息的初始化
 
 # Getting Started with Create React App
 

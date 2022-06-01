@@ -12,9 +12,11 @@ function App() {
           <p>Test</p> */}
           <Form />
         </Header>
+
         <section className="main">       
           <RepairList />
         </section>
+        
         <Footer />
       </section>   
   );
