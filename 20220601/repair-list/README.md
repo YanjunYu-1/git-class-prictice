@@ -32,6 +32,8 @@ Alt + shift + F
 
 2-1设定最小子集repair，针对要展示的信息，设定所需要的props，然后再repairList中设定props，进行信息的初始化
 
+2-2 设定初始状态useState(专有词，不可写错)，设定初始值，并以参数的形式传递到子集
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
