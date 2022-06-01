@@ -12,6 +12,8 @@ Alt + shift + F
 ```
 (2)在app.js中input标签需要闭合“/”
 
+4.将css文件内容粘贴到App.css中
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
