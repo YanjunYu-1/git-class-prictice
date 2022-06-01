@@ -24,6 +24,8 @@ Alt + shift + F
 
 9.在此使用新的方法在app.js中使用Form.jsx
 
+10.完成全部的代码布局
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
