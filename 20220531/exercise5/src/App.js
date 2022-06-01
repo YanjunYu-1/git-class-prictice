@@ -14,11 +14,12 @@ function App() {
       return [...prevState,{color:randomColor(),number:randomNumber()}];
     })
     console.log(circles);
+    console.log(setCircles);
   }
 
-  const handleDelete=()=> (id)=>{
+  const handleDeleteCircle=(id)=>{
     setCircles((prevState)=>{
-      return prevState.filter((circles)=>circles.number != +id)
+      return prevState.filter((circles)=>circles.number !== +id)
     })
   }
 
@@ -31,7 +32,7 @@ function App() {
             key={index} 
             number={cirle.number} 
             color={cirle.color} 
-            deleteCircle={handleDelete}/>
+            deleteCircle={handleDeleteCircle}/>
         ))}
       </div>
     </div>

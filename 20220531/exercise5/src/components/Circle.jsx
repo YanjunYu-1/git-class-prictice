@@ -5,7 +5,12 @@ const Circle = ({number,color,deleteCircle}) => {
         deleteCircle(id);
     }
     return (
-        <div onClick={handleClick} className='circle' style={{backgroundColor:color}}>
+        <div 
+            data-id={number} 
+            onClick={handleClick} 
+            className='circle' 
+            style={{backgroundColor:color}}
+        >
             {number}
         </div>
     );
