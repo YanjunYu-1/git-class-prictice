@@ -16,6 +16,10 @@ Alt + shift + F
 
 5.建立组件components，建最简单的Header和Footer放入
 
+6.此时浏览器有错误，不需要修改，错误是因为rander造成的
+
+7.在components中放入RepairList修复列表
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

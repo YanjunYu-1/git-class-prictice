@@ -6,7 +6,8 @@ const Header = () => {
                 <input 
                     className="new-repair" 
                     placeholder="What needs to be repaired?" 
-                    autofocus="" />
+                    autofocus="" 
+                />
             </form>
         </header>
     );
