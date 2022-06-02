@@ -1,5 +1,7 @@
 1.新建文件，删除无关文档
 
+2.建立Header
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
