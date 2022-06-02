@@ -38,6 +38,19 @@ Alt + shift + F
 
 （1）最小子集repair添加删除事件onClick，并向父类repaiList请求参数，没有再向父类app请求
 
+2-4添加项目
+
+（1）阻止局部刷新
+```java
+event.preventDefault();//阻止链接打开 URL阻止刷新
+```
+
+(2)app可以传导方法，所以主方法写在app中，在各部分只要调用就行
+
+（3）有个问题，新添加的项目无法删除
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
