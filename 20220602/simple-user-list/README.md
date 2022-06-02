@@ -1,3 +1,53 @@
+useEffect使用时有以下4种情况
+```java
+1、不传递
+useEffect不传递第二个参数会导致每次渲染都会运行useEffect。然后，当它运行时，它获取数据并更新状态。然后，一旦状态更新，组件将重新呈现，这将再次触发useEffect，这就是问题所在。
+//1
+  useEffect(()=>{
+    console.log(props.number)
+    setNumber(props.number)
+  }) //所有更新都执行
+
+2、传递空数组
+//2
+  useEffect(()=>{
+    console.log(props)
+  },[]) //仅在挂载和卸载的时候执行
+
+3、传递一个值
+//3
+  useEffect(()=>{
+    console.log(count)
+  },[count]) //count更新时执行
+
+4、传递多个
+//4
+const Asynchronous : React.FC<PropsType>=({number})=>{
+  const [number2,setNumber2] = useState(number);
+  useEffect(()=>{
+    console.log(number)
+    setNumber2(number)
+  },[number,setNumber2]) //监听props对象number的更改
+  //setNumber2是useState返回的setter，所以不会在每次渲染时重新创建它，因此effect只会运行一次
+ }
+
+5、传递props的对象 传递的useState返回的setter
+
+6、return 方法
+
+const timer = setInterval(() => {
+		setCount(count + 1)
+	}, 1000)
+	// useEffect方法的第一个参数是一个函数，函数可以return一个方法，这个方法就是在组件销毁的时候会被调用
+	useEffect(() => {
+		return () => {
+			clearInterval(timer)
+		}
+	}, [])
+
+```
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
