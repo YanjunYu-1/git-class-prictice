@@ -1,5 +1,5 @@
-
 import placeholder from "../images/placeholder.jpg";
+
 const Movie = () => {
     return (
         <div className="movie">

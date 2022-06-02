@@ -1,3 +1,18 @@
+
+1.建立软件，分组件
+
+2.建立数据从网站上的下载链接
+
+2-1.建立密匙 api-key.js
+
+2-2.建立services=>movie-API
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
