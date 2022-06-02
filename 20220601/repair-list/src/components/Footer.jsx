@@ -1,7 +1,9 @@
-const Footer = () => {
+const Footer = ({clearComplted}) => {
     return (
     <footer className="footer">
-        <button className="clear-completed">Clear completed</button>
+        <button onClick={clearComplted} className="clear-completed">
+            Clear completed
+        </button>
     </footer>);
 }
 

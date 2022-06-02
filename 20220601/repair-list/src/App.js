@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -6,14 +6,20 @@ import RepairList from "./components/RepairList";
 import Form from "./components/Form";
 
 function App() {
-  const initialState = [
-    { id: 1, description: "car make a funny sound", completed: true },
-    { id: 2, description: "window is browen", completed: false },
-    { id: 3, description: "bick has a flat tire", completed: true },
-  ];
+  // const initialState = [
+  //   { id: 1, description: "car make a funny sound", completed: true },
+  //   { id: 2, description: "window is browen", completed: false },
+  //   { id: 3, description: "bick has a flat tire", completed: true },
+  // ];
 
-  const [repairs, setRepairs] = useState(initialState);
+  const initialState =JSON.parse(localStorage.getItem("repairs"))
+
+  const [repairs, setRepairs] = useState(initialState||[]);
   
+  useEffect(()=>{
+    localStorage.setItem("repairs",JSON.stringify(repairs));
+  },[repairs]);
+
   //此方法添加项目
   const handleAddRepair=(description)=>{
     const id=+(Math.random()+100).toFixed(4);
@@ -61,6 +67,13 @@ function App() {
     })
   }
 
+  //清除复选框中选项的方法
+  const handleClearCompleted=()=>{
+    // console.log("clear completed was called");
+    setRepairs((prevState)=>
+      prevState.filter((repair)=>repair.completed===false))
+  }
+
   return (
     <section className="fixmeapp">
       <Header>
@@ -77,7 +90,7 @@ function App() {
       />
       </section>
 
-      <Footer />
+      <Footer clearComplted={handleClearCompleted}/>
     </section>
   );
 }

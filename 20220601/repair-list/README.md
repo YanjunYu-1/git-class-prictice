@@ -67,7 +67,73 @@ findIndex()如果未找到匹配项，则 该方法返回 -1。
 该findIndex()方法不会更改原始数组。
 ```
 
+3.删除复选框选定的项目
 
+3-1 useEffect使用时有以下4种情况
+```java
+1、不传递
+useEffect不传递第二个参数会导致每次渲染都会运行useEffect。然后，当它运行时，它获取数据并更新状态。然后，一旦状态更新，组件将重新呈现，这将再次触发useEffect，这就是问题所在。
+//1
+  useEffect(()=>{
+    console.log(props.number)
+    setNumber(props.number)
+  }) //所有更新都执行
+
+2、传递空数组
+//2
+  useEffect(()=>{
+    console.log(props)
+  },[]) //仅在挂载和卸载的时候执行
+
+3、传递一个值
+//3
+  useEffect(()=>{
+    console.log(count)
+  },[count]) //count更新时执行
+
+4、传递多个
+//4
+const Asynchronous : React.FC<PropsType>=({number})=>{
+  const [number2,setNumber2] = useState(number);
+  useEffect(()=>{
+    console.log(number)
+    setNumber2(number)
+  },[number,setNumber2]) //监听props对象number的更改
+  //setNumber2是useState返回的setter，所以不会在每次渲染时重新创建它，因此effect只会运行一次
+ }
+
+5、传递props的对象 传递的useState返回的setter
+
+6、return 方法
+
+const timer = setInterval(() => {
+		setCount(count + 1)
+	}, 1000)
+	// useEffect方法的第一个参数是一个函数，函数可以return一个方法，这个方法就是在组件销毁的时候会被调用
+	useEffect(() => {
+		return () => {
+			clearInterval(timer)
+		}
+	}, [])
+
+```
+
+3-2 localStorage特性
+```java
+在HTML5中，新加入了一个localStorage特性，这个特性主要是用来作为本地存储来使用的，解决了cookie存储空间不足的问题(cookie中每条cookie的存储空间为4k)，localStorage中一般浏览器支持的是5M大小，这个在不同的浏览器中localStorage会有所不同。
+
+在HTML5中，本地存储是一个window的属性，包括localStorage和sessionStorage，从名字应该可以很清楚的辨认二者的区别，前者是一直存在本地的，后者只是伴随着session，窗口一旦关闭就没了。以下是localStorage 和sessionStorage的区别
+
+(1)localStorage和sessionStorage一样都是用来存储客户端临时信息的对象。
+
+(2)他们均只能存储字符串类型的对象（虽然规范中可以存储其他原生类型的对象，但是目前为止没有浏览器对其进行实现）。
+
+(3)localStorage生命周期是永久，这意味着除非用户显示在浏览器提供的UI上清除localStorage信息，否则这些信息将永远存在。
+
+(4)sessionStorage生命周期为当前窗口或标签页，一旦窗口或标签页被永久关闭了，那么所有通过sessionStorage存储的数据也就被清空了。
+
+(5)不同浏览器无法共享localStorage或sessionStorage中的信息。相同浏览器的不同页面间可以共享相同的localStorage（页面属于相同域名和端口），但是不同页面或标签页间无法共享sessionStorage的信息。这里需要注意的是，页面及标签页仅指顶级窗口，如果一个标签页包含多个iframe标签且他们属于同源页面，那么他们之间是可以共享sessionStorage的。
+```
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
