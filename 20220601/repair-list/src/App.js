@@ -13,12 +13,12 @@ function App() {
   ];
 
   const [repairs, setRepairs] = useState(initialState);
-  const id=(Math.random()+100).toFixed(4);
-
+  
   //此方法添加项目
   const handleAddRepair=(description)=>{
+    const id=+(Math.random()+100).toFixed(4);
     // console.log(description);
-    setRepairs(prevState=>[
+    setRepairs((prevState)=>[
       { id:id, description:description,completed:false},
       ...prevState,
     ]);
@@ -37,7 +37,28 @@ function App() {
   const handleDeleteRepair=(id)=>{
     // console.log("delete pair",id);
     // console.log(typeof id)
-    setRepairs(prevState=>prevState.filter(repair=>repair.id !== +id))
+    setRepairs((prevState)=>prevState.filter((repair)=>repair.id !== +id))
+  }
+
+  const handleToggleRepair=(id)=>{
+    // copy the array to a new array复制数组到一个新的数组
+    // find the index of the item that has the passed in id找到传递id的项的索引
+    // toggle the completed status切换完成状态
+    // return the new array返回新数组
+
+    // console.log("toggle repair called",id)
+    setRepairs((prevState)=>{
+      const newRepairs =[...prevState];
+      const itemIndex = newRepairs.findIndex((repair)=>repair.id===+id);
+      newRepairs[itemIndex] ={
+        ...newRepairs[itemIndex],
+        completed:!newRepairs[itemIndex].completed,
+      }
+      return newRepairs;
+      // //因为StrictMode不能实现
+      // newRepairs[itemIndex].completed=!newRepairs[itemIndex].completed;
+      // return [prevState];
+    })
   }
 
   return (
@@ -49,7 +70,11 @@ function App() {
       </Header>
 
       <section className="main">
-        <RepairList repairs={repairs} deleteRepair={handleDeleteRepair} />
+        <RepairList 
+        repairs={repairs} 
+        deleteRepair={handleDeleteRepair} 
+        toggleRepair={handleToggleRepair}
+      />
       </section>
 
       <Footer />

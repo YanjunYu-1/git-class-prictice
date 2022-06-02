@@ -49,6 +49,23 @@ event.preventDefault();//阻止链接打开 URL阻止刷新
 
 （3）有个问题，新添加的项目无法删除
 
+已经解决，问题是：回调函数中，参数缺少（），导致无法选择参数
+
+2-5关于复选框
+
+（1）阻止局部刷新
+```java
+定义和使用
+该findIndex()方法为每个数组元素执行一个函数。
+
+该findIndex()方法返回通过测试的第一个元素的索引（位置）。
+
+findIndex()如果未找到匹配项，则 该方法返回 -1。
+
+该findIndex()方法不执行空数组元素的函数。
+
+该findIndex()方法不会更改原始数组。
+```
 
 
 # Getting Started with Create React App

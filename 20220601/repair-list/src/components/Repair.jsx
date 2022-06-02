@@ -1,5 +1,5 @@
 const Repair = (props) => {
-    const {id,description,completed,deleteRepair}=props;
+    const {id,description,completed,deleteRepair,toggleRepair} = props;//toggleRepair切换修复
 
     // const handleClick=(event) => {
     //     console.log(event)
@@ -8,7 +8,11 @@ const Repair = (props) => {
     return (
         <li data-id={id} className={completed?"completed":""}>
             <div className="view">
-                <input className="toggle" type="checkbox" />
+                <input 
+                    onClick={()=>toggleRepair(id)} 
+                    className="toggle" 
+                    type="checkbox" 
+                />
                 <label>{description}</label>
                 <button 
                     onClick={()=>deleteRepair(id)} 
