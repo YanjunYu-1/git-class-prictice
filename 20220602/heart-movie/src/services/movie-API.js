@@ -1,5 +1,6 @@
-import API_KEY from "../api-key";
-const SEARCH_URL = `http://api.themoviedb.org/3/movie/550?api_key=${API_KEY}`
+// import API_KEY from "../api-key";
+const API_KEY = '98c449f0cb1986bc3644e7d02ded8e81'
+const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}`;
 
 const searchMovies=async(query)=>{
     const request=await fetch(`${SEARCH_URL}&query=${query}`);
