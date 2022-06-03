@@ -1,7 +1,7 @@
 import placeholder from "../images/placeholder.jpg";
 
 const Movie = ({movie}) => {
-    console.log(movie);
+    // console.log(movie);
     const {title,overview,vote_average,poster_path}=movie;
 
     return (

@@ -77,7 +77,9 @@ const timer = setInterval(() => {
 			clearInterval(timer)
 		}
 	}, [])
+```
 
+4.利用受控组件，通过关键字查询
 
 
 

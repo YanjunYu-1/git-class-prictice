@@ -1,10 +1,10 @@
 import Movie from "./Movie";
 
 const MovieList = ({movies}) => {
-  console.log(movies);
+  // console.log(movies);
     return ( 
-        <div class="titleList">
-            <div class="title">
+        <div className="titleList">
+            <div className="title">
               <h1>Movies</h1>
               <div className="titles-wrapper">
                   {movies.map((movie)=>(

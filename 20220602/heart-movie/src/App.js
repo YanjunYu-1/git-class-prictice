@@ -14,12 +14,16 @@ function App() {
     searchMovies("star").then((movies) =>setMovies(movies));
   },[]);
 
-  console.log(movies);
+  // console.log(movies);
+
+  const handleSeach=(query) =>{
+    searchMovies(query).then((movies) =>setMovies(movies))
+  };
   
   return (
     <>
       <Header>
-        <Form />
+        <Form searchMovies={handleSeach}/>
       </Header>
       <MovieList movies={movies}/>
     </>
