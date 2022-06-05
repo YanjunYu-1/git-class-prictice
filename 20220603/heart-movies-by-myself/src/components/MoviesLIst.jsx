@@ -1,6 +1,6 @@
 import Movie from "./Movie";
 
-const MoviesList = ({movies}) => {
+const MoviesList = ({movies,toggleLikeMovie,likedMovies}) => {
     // console.log(movies)
     return (
         <div className="titleList">
@@ -8,7 +8,18 @@ const MoviesList = ({movies}) => {
                 <h1>Movies</h1>
                 <div className="titles-wrapper">
                     {movies.map((movie) =>(
-                        <Movie key={movie.id} movie={movie}/>
+                        <Movie 
+                            key={movie.id} 
+                            movie={movie}
+                            liked={
+                                likedMovies.findIndex(
+                                    (likedMovies)=>movie.id===likedMovies
+                                )===-1
+                                ? false
+                                : true
+                    }
+                            toggleLikeMovie={toggleLikeMovie}
+                        />
                     ))}
                 </div>
             </div>

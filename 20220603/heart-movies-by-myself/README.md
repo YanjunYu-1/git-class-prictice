@@ -22,9 +22,24 @@ https://api.themoviedb.org/3/search/movie?api_key=98c449f0cb1986bc3644e7d02ded8e
 3.handleChange-对用户输入的改变，改变初始值searchValue，而不是改变以后的值
 4.hangleSubmit-将改变的值进行提交,此处需要传递方法进行搜索
 在HTML中，标签<input>、<textarea>、<select>的值的改变通常是根据用户输入进行更新。在React中，可变状态通常保存在组件的状态属性中，并且只能使用 setState() 更新，而呈现表单的React组件也控制着在后续用户输入时该表单中发生的情况，以这种由React控制的输入表单元素而改变其值的方式，称为：“受控组件”。
-```java
+```
 
 （2）注意，传递的方法需要在组件中进行接收=》{}
+
+4.添加点赞收藏功能
+
+（1）通过movie点击事件，将Id上传到movieList=》add
+
+（2）将改变后的“喜欢电影”的状态返回给movieList，进行判断，如果喜欢电影的列表中没有此id，将状态改编为FALSE，反之为TRUE
+
+
+```java
+ES6为Array增加了find()，findIndex函数。
+
+find()函数用来查找目标元素，找到就返回该元素，找不到返回undefined。
+
+findIndex()函数也是查找目标元素，找到就返回元素的位置，找不到就返回-1。
+```
 
 # Getting Started with Create React App
 
