@@ -6,4 +6,6 @@ const searchMovies=async(query) => {
     const request= await fetch(`${SEARCH_URL}&query=${query}`)
     const response=await request.json()
     const movies= await response.results;
+    return movies;
 }
+export default searchMovies;

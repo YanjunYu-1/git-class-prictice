@@ -1,5 +1,18 @@
 1.在jsx中class=>className，不能有value="",可以暂时去掉，等后期用的时候再写
 
+2.通过services=>movie-API=>收集网站信息
+```java
+https://api.themoviedb.org/3/search/movie?api_key=98c449f0cb1986bc3644e7d02ded8e81&query=hero
+```
+（1）组件之间，和组件内部传递的参数需要加{}，因为他不是function
+
+（2）每个层级传递时，注意单数和负数
+
+（3）每一步都需要通过console.log确认是否接收到数据
+
+（4）对没有照片的情况进行正则表达式的判断
+
+
 
 # Getting Started with Create React App
 
