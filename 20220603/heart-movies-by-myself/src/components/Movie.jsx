@@ -2,7 +2,7 @@ import placeholder from '../images/placeholder.jpg'
 
 
 const Movie = ({movie}) => {
-    console.log(movie)//检查是否得到movies
+    // console.log(movie)//检查是否得到movies
     const {title,vote_average,overview,poster_path}=movie
     return (
         <div className="movie">

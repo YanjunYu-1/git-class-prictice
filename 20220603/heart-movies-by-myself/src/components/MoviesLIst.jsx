@@ -1,7 +1,7 @@
 import Movie from "./Movie";
 
 const MoviesList = ({movies}) => {
-    console.log(movies)
+    // console.log(movies)
     return (
         <div className="titleList">
             <div className="title">

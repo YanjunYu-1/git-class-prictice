@@ -3,7 +3,7 @@
 2.通过services=>movie-API=>收集网站信息
 ```java
 https://api.themoviedb.org/3/search/movie?api_key=98c449f0cb1986bc3644e7d02ded8e81&query=hero
-```
+```java
 （1）组件之间，和组件内部传递的参数需要加{}，因为他不是function
 
 （2）每个层级传递时，注意单数和负数
@@ -12,7 +12,19 @@ https://api.themoviedb.org/3/search/movie?api_key=98c449f0cb1986bc3644e7d02ded8e
 
 （4）对没有照片的情况进行正则表达式的判断
 
+3.添加搜素功能
 
+（1）在时才能此功能的组件中，现时所得到的值，及使其成为受控组件
+
+```java
+1.只存在于表单中
+2.首先有接收Value的地方
+3.handleChange-对用户输入的改变，改变初始值searchValue，而不是改变以后的值
+4.hangleSubmit-将改变的值进行提交,此处需要传递方法进行搜索
+在HTML中，标签<input>、<textarea>、<select>的值的改变通常是根据用户输入进行更新。在React中，可变状态通常保存在组件的状态属性中，并且只能使用 setState() 更新，而呈现表单的React组件也控制着在后续用户输入时该表单中发生的情况，以这种由React控制的输入表单元素而改变其值的方式，称为：“受控组件”。
+```java
+
+（2）注意，传递的方法需要在组件中进行接收=》{}
 
 # Getting Started with Create React App
 
