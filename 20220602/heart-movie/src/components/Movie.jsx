@@ -1,9 +1,14 @@
 import placeholder from "../images/placeholder.jpg";
 
-const Movie = ({movie}) => {
+const Movie = ({movie,liked,toggleLikeMovie}) => {
     // console.log(movie);
-    const {title,overview,vote_average,poster_path}=movie;
+    const {id,title,overview,vote_average,poster_path}=movie;
 
+    const handleClick=(event) => {
+        // console.log(event.target)//点击后得到一个节点
+        // console.log(id)//点击后得到一个节点
+        toggleLikeMovie(id)//需要传递一个方法
+    }
     return (
         <div className="movie">
             <img
@@ -18,8 +23,8 @@ const Movie = ({movie}) => {
                 <div className="title">{title}</div>
                 <div className="rating">{vote_average}/10</div>
                 <div className="plot">{overview}</div>
-                <div data-toggled="true" className="listToggle">
-                    <div>
+                <div data-toggled={liked} className="listToggle">
+                    <div onClick={handleClick}>
                         <i className="far fa-heart"></i>
                         <i className="fas fa-heart"></i>
                     </div>

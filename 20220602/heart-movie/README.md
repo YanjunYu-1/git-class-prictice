@@ -81,6 +81,44 @@ const timer = setInterval(() => {
 
 4.利用受控组件，通过关键字查询
 
+5.将喜欢的电影添加到列表中
+
+此处运用多个传递，以及省略方法名直接进行方法传递的例子，值得注意
+
+```java
+JavaScript Array includes()
+Return Value ：A boolean	true if the value is found, otherwise false.
+```
+
+```java
+JavaScript Array findIndex()
+该findIndex()方法为每个数组元素执行一个函数。
+
+该findIndex()方法返回通过测试的第一个元素的索引（位置）。
+
+findIndex()如果未找到匹配项，则 该方法返回 -1。
+
+该findIndex()方法不执行空数组元素的函数。
+
+该findIndex()方法不会更改原始数组。
+  
+Return Value ：A number
+```
+
+```java
+JavaScript Array filter()
+该filter()方法创建一个新数组，其中填充了通过函数提供的测试的元素。
+
+该filter()方法不执行空元素的功能。
+
+该filter()方法不会更改原始数组。
+
+Return Value :An array
+
+数组	包含通过测试的元素。
+如果没有元素通过测试，则返回一个空数组。
+
+```
 
 
 
