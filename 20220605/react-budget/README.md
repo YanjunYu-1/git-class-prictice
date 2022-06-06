@@ -1,8 +1,28 @@
-1.建立文件夹
+1. 建立文件夹
 
-2.分离组件
+2. 分离组件
 
-# Getting Started with Create React App
+3. [BEM命名规范](https://blog.csdn.net/WangYanWenXin/article/details/120451613?ops_request_misc=&request_id=&biz_id=102&utm_term=css%20BEM.&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-120451613.142^v11^control,157^v13^control&spm=1018.2226.3001.4187)
+
+（1）目前对于字体的链接，可以直接copy到public=>index.html
+
+```javascrip
+BEM 的意思就是块（block）、元素（element）、修饰符（modifier）,是由Yandex团队提出的一种前端命名方法论。
+
+.block{}
+.block__element{}//代表.block的后代，用于形成一个完整的.block的整体。
+.block--modifier{}//代表.block的不同状态或不同版本。
+
+__表示的就是下级元素
+--表示的是不同的形态
+就是另一个类名，另一种样式，就像overview__row中有公共的样式，而overview__row--right中具有非公共的样式，是特有的样式
+
+.site-search{} /* 块 */
+.site-search__field{} /* 元素 */
+.site-search--full{} /* 修饰符 */
+```
+
+# Getting Started with Create Rect App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
