@@ -1,10 +1,26 @@
-import './App.css';
+import "./App.css";
+import BudgetSummary from './components/BudgetSummary'
+import AddForm from './components/AddForm'
+import IncomeList from './components/IncomeList'
+import ExpensesList from './components/ExpensesList'
 
 function App() {
   return (
-    <div className="App">
-      <h1>this works</h1>
-    </div>
+    <body>
+      <div className="top">
+        <BudgetSummary />
+      </div>
+
+      <div className="bottom">
+        <AddForm />
+
+        <div className="container">
+          <IncomeList />
+
+          <ExpensesList />
+        </div>
+      </div>
+    </body>
   );
 }
 
